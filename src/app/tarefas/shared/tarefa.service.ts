@@ -51,4 +51,6 @@ export class TarefaService {
     localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
+  
+
 }
