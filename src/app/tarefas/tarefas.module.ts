@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TarefaService } from './shared';
-import { ListarTarefaComponent } from './listar/listar-tarefa.component';
+import { ListarTarefaComponent } from './listar';
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [ //importar componentes
     ListarTarefaComponent
   ],
-  imports: [
+  imports: [ //importar modulos
     CommonModule
   ],
-  providers: [
+  providers: [ //importar serviços
     TarefaService
   ]
 })
