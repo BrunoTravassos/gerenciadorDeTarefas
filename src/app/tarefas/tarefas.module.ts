@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TarefaService } from '.';
+import { TarefaService } from './shared';
 
 
 
