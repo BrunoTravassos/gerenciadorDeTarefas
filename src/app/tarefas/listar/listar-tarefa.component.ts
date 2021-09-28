@@ -14,14 +14,21 @@ export class ListarTarefaComponent implements OnInit {
 
   ngOnInit() {
     this.tarefas = this.listarTodos();
-    this.tarefas = [
+    /* this.tarefas = [
       new Tarefa(1,'Tarefa 01', false),
       new Tarefa(2,'Tarefa 02', false)
-    ]
+    ] */
   }
 
   listarTodos(): Tarefa[] {
     return this.tarefaService.listarTodos();
+  }
+
+  alterarStatus(tarefa: Tarefa): void{
+    if (confirm('Deseja alterar o status da tarefa "' + tarefa.nome+ '"?')) {
+      this.tarefaService.alterarStatus(tarefa.id);
+      this.tarefas = this.listarTodos();
+    }
   }
 
 }
